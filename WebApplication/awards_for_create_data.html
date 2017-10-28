@@ -1,0 +1,1365 @@
+﻿<?php
+
+switch (true) {
+    case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+    case $_SERVER['PHP_AUTH_USER'] !== '***':
+    case $_SERVER['PHP_AUTH_PW']   !== '***':
+        header('WWW-Authenticate: Basic realm="Enter username and password."');
+        header('Content-Type: text/plain; charset=utf-8');
+        die('このページを見るにはログインが必要です');
+}
+
+header('Content-Type: text/html; charset=utf-8');
+
+?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>受賞作品・応募作品テーマ | CrystalDiskInfo イラストコンテスト 2017</title>
+    <meta name="keywords" content="イラストコンテスト,CrystalDiskInfo">
+    <meta name="description" content="HDD/SSD 診断アプリ「CrystalDiskInfo Kurei Kei Edition」のテーマ画像（キャラクター暮井 慧のイラスト）を募集します">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="Content/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/animate.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="css/main.css?20171028">
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+    <meta property="og:title" content="受賞作品・応募作品テーマ | CrystalDiskInfo イラストコンテスト 2017">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://pronama.azurewebsites.net/special/crystaldiskinfo-illust-contest-2017/">
+    <meta property="og:site_name" content="CrystalDiskInfo イラストコンテスト 2017">
+    <meta property="og:description" content="暮井 慧（プロ生ちゃん）を描いた CrystalDiskInfo のテーマ画像を募集します">
+    <meta property="og:image" content="http://pronama.azurewebsites.net/wp-content/uploads/2017/07/crystaldiskinfo.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pronama">
+    <meta name="twitter:title" content="受賞作品・応募作品テーマ | CrystalDiskInfo イラストコンテスト 2017">
+    <meta name="twitter:description" content="暮井 慧（プロ生ちゃん）を描いた CrystalDiskInfo のテーマ画像を募集します">
+    <meta name="twitter:image" content="http://pronama.azurewebsites.net/wp-content/uploads/2017/07/crystaldiskinfo.jpg">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="/"><img src="img/logo.svg" alt="Logo"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a href="works.html">応募作品</a></li>-->
+                    <li><a href="http://pronama.azurewebsites.net/" target="_blank"><i class="fa fa-external-link"></i> Website</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+
+    <div style="background:#00A9FF;">
+        <div class="container" style="padding-top:20px; padding-bottom: 20px;">
+            <div class="row">
+                <div class="col-xs-6">
+                    <a href="./" class="logo"><img src="img/logo.svg" alt="Logo"></a>
+                </div>
+                <div class="col-xs-6 signin text-right navbar-nav">
+                    <!--<a href="works.html">応募作品</a>
+                    &nbsp;&nbsp;-->
+                    <a href="http://pronama.azurewebsites.net/" target="_blank"><i class="fa fa-external-link"></i> Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="be-the-first" class="pad-xl">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
+                    <h2>イラストコンテスト 2017<br />受賞作品・応募作品テーマ</h2>
+                    <p class="lead">
+                        CrystalDiskInfo イラストコンテスト 2017 の受賞作品の発表！<br />全応募作品のテーマをダウンロードできます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="iphone wow fadeInUp" data-wow-delay="1s">
+                <img class="img-responsive" id="ultimate" src="img/crystaldiskinfo_ultimate.png" style="display:none;" />
+            </div>
+        </div>
+    </section>
+
+    <section id="main-info" class="pad-xl">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
+                    <hr class="line purple">
+                    <h3>CrystalDiskInfo</h3>
+                    <p class="small">
+                        一部の USB 接続や Intel RAID にも対応し、ディスクに異常があればメールや音声で通知してくれるディスク (HDD/SSD) ユーティリティです。
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><a class="small" target="_blank" href="http://crystalmark.info/"><i class="fa fa-external-link"></i> Crystal Dew World（開発元・アプリダウンロード）</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
+                    <hr class="line blue">
+                    <h3>暮井 慧（プロ生ちゃん）</h3>
+                    <p class="small">
+                        都内の公立高校に通う高校生。部活は、情報処理研究会。身体を動かすのも好きで、気が向いたときはなぜか体育会系の部活に混ぜてもらっていろんなスポーツをすることも。プログラミング生放送のキャラクターとして活動中！
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><a class="small" target="_blank" href="http://pronama.azurewebsites.net/pronama/"><i class="fa fa-external-link"></i> プロフィール</a></li>
+                        <li><a class="small" target="_blank" href="https://twitter.com/ixy"><i class="fa fa-external-link"></i> イラスト: Ixy</a></li>
+                        <li><a class="small" target="_blank" href="https://twitter.com/uesaka_official"><i class="fa fa-external-link"></i> CV: 上坂すみれ</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
+                    <hr class="line yellow">
+                    <h3>News</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="small" target="_blank" href="http://ascii.jp/elem/000/001/519/1519053/"><i class="fa fa-external-link"></i> 上坂すみれさんの「プロ生ちゃん」ボイス収録を密着取材（ASCII.jp）</a></li>
+                        <li><a class="small" target="_blank" href="http://akiba-pc.watch.impress.co.jp/docs/sp/1074080.html"><i class="fa fa-external-link"></i> 声優 上坂すみれさんのサイン色紙プレゼントもあり！ “CrystalDiskInfo Kurei Kei Edition”のボイス収録インタビュー - AKIBA PC Hotline!</a></li>
+                        <li><a class="small" target="_blank" href="http://forest.watch.impress.co.jp/docs/news/1074620.html"><i class="fa fa-external-link"></i> 「CrystalDiskInfo」に“プロ生ちゃん”モデルが登場！ 5つのテーマとボイスを収録 - 窓の杜</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="press" class="">
+
+
+        <div class="container">
+
+            <div class="row margin-40">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h2 class="black">受賞作品</h2>
+                    <p class="black">「<i class="fa fa-download" title="テーマ個別ダウンロード"></i>」から個別にテーマ画像をダウンロードできます。<br /><a href="#blue-section">インストール方法はこちら</a>。</p>
+                </div>
+            </div>
+
+
+            <div class="row margin-30 news-container">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeIn" data-wow-delay="0.6s">
+
+                    <h3 class=" work-div" id="KureiKei~kohakumuro">プロ生ちゃん Ultimate 賞 <small>（1名）</small></h3>
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="img/34.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                <img src="img/34.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                            </a>
+                        </div><div class="panel-footer">
+                            <h4>
+                                <a href="https://twitter.com/muromeron0429" target="_blank">琥珀むろさん</a>
+                                ・
+                                <a class="exlink" href="https://twitter.com/muromeron0429" target="_blank"><i class="fa fa-twitter"></i></a>
+                                &nbsp;
+                                <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYOEVZMVdCN2wxYW8?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="media margin-40 comment">
+                        <div class="media-left">
+                            <img class="media-object img-circle icon" src="img/icon1.png" />
+                        </div>
+                        <div class="media-body">
+                            <div class="popover right show" style="position:relative; max-width:100%;">
+                                <div class="arrow"></div>
+                                <div class="popover-content">
+                                    雨上がりの空とアジサイがすごいきれい！　思わず足を止めちゃった！　Ultimate 賞！🎉 CrystalDiskInfo Kurei Kei Edition の Ultimate のデフォルトテーマになるよ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="">賞品</h3>
+                    <ul class="black">
+                        <li>CrystalDiskInfo Kurei Kei Edition Ultimate のデフォルトテーマとして採用（デフォルト設定は期間限定です）</li>
+                        <li>CrystalDiskInfo Kurei Kei Edition カレンダーに採用</li>
+                        <li>副賞： QNAP TS-231P + NAS 用 HDD WD Red 3TB x 2個セット</li>
+                        <li>副賞： プロ生ちゃんグッズ、カレンダー</li>
+                    </ul>
+                    <div>
+                        <img class="img-responsive margin-30" src="img/258_1473760219_TS-231P_Hot-swappable.png" />
+                        <p class="small black">
+                            高性能 2ベイ NAS を HDD 込みでプレゼント。バックアップ、同期、リモートアクセスおよびホームエンターテインメント用の強力でありながら使いやすいネットワークストレージセンターです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row margin-30 news-container">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeIn" data-wow-delay="0.6s">
+
+                    <h3 class="">プロ生ちゃん Prime 賞 <small>（4名・順不同）</small></h3>
+
+                    <div class="row">
+                        <div class="col-md-6 work-div" id="KureiKei~nekopan">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/40.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/40.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="https://twitter.com/nekopan00" target="_blank">ねこ☆ぱんさん</a>
+                                        ・
+                                        <a class="exlink" href="https://twitter.com/nekopan00" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYRVBxMzVLNWRYQnM?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            元気にジャンプ！　カラーリングも元気いっぱいだね！　Prime 賞！🎉
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 work-div" id="KureiKei~poyoyonchihiro">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/45.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/45.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="https://twitter.com/poyoyon_chihiro" target="_blank">ぽよよんチヒロさん</a>
+                                        ・
+                                        <a class="exlink" href="https://twitter.com/poyoyon_chihiro" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYa3BxOXQxbVcyZ3c?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            ちょっとコーヒー飲んで一息！　日常の一枚を切り取った感じがいいね！　Prime 賞！🎉
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 work-div" id="KureiKei~hasumikaoru">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/21.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/21.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="http://hasumikaoru.net/" target="_blank">蓮水薫さん</a>
+                                        ・
+                                        <a class="exlink" href="http://hasumikaoru.net/" target="_blank"><i class="fa fa-globe"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYVkxmTEhRVVYyVzQ?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            爽やかな朝だね！　今日も一日がんばるぞー！　でも、ちょっと急がないと遅刻しそう？　Prime 賞！🎉
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 work-div" id="KureiKei~nanatunatu">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/50.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/50.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="https://twitter.com/7nanatunatu" target="_blank">ななつなつさん</a>
+                                        ・
+                                        <a class="exlink" href="https://twitter.com/7nanatunatu" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYSWZob0pwYVBYblE?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            わーアイドル衣装！　かわいい～ありがとう！　歌って踊ろう～　Prime 賞！🎉
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h3 class="">賞品</h3>
+
+                    <ul class="black">
+                        <li>CrystalDiskInfo Kurei Kei Edition Ultimate のテーマとして採用</li>
+                        <li>CrystalDiskInfo Kurei Kei Edition カレンダーに採用</li>
+                        <li>副賞： QNAP TAS-168 （2TB HDD 内蔵）</li>
+                        <li>副賞： プロ生ちゃんグッズ、カレンダー</li>
+                    </ul>
+
+                    <div>
+                        <img class="img-responsive margin-30" src="img/207_1441769163_2.png" />
+                        <p class="small black">
+                            コンパクトなメディアセンターをプレゼント。ファイルのストレージ、バックアップ、リモートアクセスのためのネットワークストレージセンターです。
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="row margin-30 news-container">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeIn" data-wow-delay="0.6s">
+
+                    <h3 class="">プロ生ちゃん Premium 賞 <small>（4名・順不同）</small></h3>
+
+                    <div class="row">
+                        <div class="col-md-6 work-div" id="KureiKei~mugya">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/02.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/02.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        むぎゃさん
+                                        ・
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYejRGNXA4Wm1iRmc?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            みんなおいで～って感じ？　一緒に街を散策しよう！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 work-div" id="KureiKei~TakiOuno">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/14.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/14.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        櫻野田規さん
+                                        ・
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYUGlhZ04yVG1PY0U?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            ちょっと情緒的な感じの帰り道の風景だね。選曲もちょっとせつなめで！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 work-div" id="KureiKei~AsYuihira">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/30.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/30.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="http://ciel.ciao.jp/" target="_blank">結平明日さん</a>
+                                        ・
+                                        <a class="exlink" href="http://ciel.ciao.jp/" target="_blank"><i class="fa fa-globe"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYRFJRQ04yZUpwU3c?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            幻想的な夕焼けがステキだね～明日も晴れるかな？
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 work-div" id="KureiKei~maru">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/46.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/46.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        maruさん
+                                        ・
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYMloxcTZ2Zll6bjg?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            タブレットで何をしているでしょう？　見せてあげないけど
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h3 class="">賞品</h3>
+
+                    <ul class="black">
+                        <li>CrystalDiskInfo Kurei Kei Edition Ultimate のテーマとして採用</li>
+                        <li>CrystalDiskInfo Kurei Kei Edition カレンダーに採用</li>
+                        <li>副賞： ポータブルストレージ ※</li>
+                        <li>副賞： プロ生ちゃんグッズ、カレンダー</li>
+                    </ul>
+
+                    <div>
+                        <img style="margin: 0 auto; max-width: 500px;" class="img-responsive margin-30" src="img/2015101510385829.jpg" />
+                        <p class="small black">
+                            大きなデータの持ち運びもらくちんなポータブルストレージをプレゼント。
+                        </p>
+                    </div>
+                    <p class="small">
+                        ※ 写真の製品とは異なる場合があります。
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="row margin-30 news-container">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeIn" data-wow-delay="0.6s">
+
+                    <h3 class="">プロ生ちゃん Special 賞 <small></small></h3>
+                    <p class="small">特別賞として募集締め切り後に新たに追加した賞です。</p>
+
+                    <div class="row">
+                        <div class="col-md-6 work-div" id="KureiKei~tori">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/26.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/26.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        とりさん
+                                        ・
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYV1g4ZElVN3pvT3c?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            楽しい夏まつり感が出てるね！　浴衣もかわいい！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 work-div" id="KureiKei~kosake">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/15.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/15.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="https://twitter.com/norisugoshi" target="_blank">小酒（こさけ）さん</a>
+                                        ・
+                                        <a class="exlink" href="https://twitter.com/norisugoshi" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYN2lrQ0VKVUQ3RnM?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            桜と桜色のコートが良い感じ！　思わずポーズ！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 work-div" id="KureiKei~ShitimiNanami">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/23.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/23.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        <a href="https://twitter.com/shitimi_73" target="_blank">七味七海さん</a>
+                                        ・
+                                        <a class="exlink" href="https://twitter.com/shitimi_73" target="_blank"><i class="fa fa-twitter"></i></a>
+                                        &nbsp;
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYUG5tR3VaR05ldm8?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            ちょっと不思議な世界。冒険に出かけよ～！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 work-div" id="KureiKei~kunimi">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <a href="img/07.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                        <img src="img/07.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                    </a>
+                                </div><div class="panel-footer">
+                                    <h4>
+                                        国見さん
+                                        ・
+                                        <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYRzJPY1pXN1V5a3M?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="media margin-40 comment">
+                                <div class="media-left">
+                                    <img class="media-object img-circle icon2" src="img/icon2.png" />
+                                </div>
+                                <div class="media-body">
+                                    <div class="popover right show" style="position:relative; max-width:100%;">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            わー、夏といえば海！　一緒に遊ぼう！
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 work-div" id="KureiKei~nyamco">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <a href="img/35.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                    <img src="img/35.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                </a>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>
+                                    <a href="https://twitter.com/nya_mco" target="_blank">にゃーむこさん</a>
+                                    ・
+                                    <a class="exlink" href="https://twitter.com/nya_mco" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    &nbsp;
+                                    <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYMHhwMktGNjRLdTQ?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="media margin-40 comment">
+                            <div class="media-left">
+                                <img class="media-object img-circle icon2" src="img/icon2.png" />
+                            </div>
+                            <div class="media-body">
+                                <div class="popover right show" style="position:relative; max-width:100%;">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        まったりタイム！　ふぃーちゃんとちーちゃんの人形もかわいいね
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 work-div" id="KureiKei~yoite">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <a href="img/06.jpg" class="zoom" data-type="image" data-toggle="lightbox">
+                                    <img src="img/06.jpg"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                </a>
+                            </div><div class="panel-footer">
+                                <h4>
+                                    <a href="https://pixiv.me/4696556" target="_blank">yoiteさん</a>
+                                    ・
+                                    <a class="exlink" href="https://pixiv.me/4696556" target="_blank"><i class="fa fa-globe"></i></a>
+                                    &nbsp;
+                                    <a class="exlink" href="https://drive.google.com/drive/folders/0B_aSQbStz8wYSGNWRTdNcFB1bVE?usp=sharing" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="media margin-40 comment">
+                            <div class="media-left">
+                                <img class="media-object img-circle icon2" src="img/icon2.png" />
+                            </div>
+                            <div class="media-body">
+                                <div class="popover right show" style="position:relative; max-width:100%;">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        文化祭でメイド喫茶だね。クリームソーダお待ち！
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="">賞品</h3>
+
+                    <ul class="black">
+                        <li>CrystalDiskInfo Kurei Kei Edition Ultimate のテーマとして採用</li>
+                        <li>CrystalDiskInfo Kurei Kei Edition カレンダーに採用</li>
+                        <li>副賞： 粗品</li>
+                        <li>副賞： プロ生ちゃんグッズ、カレンダー</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="row margin-30 news-container" style="border-bottom-width: 0;">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeIn" data-wow-delay="0.6s">
+
+                    <h3 class="">プロ生ちゃん 参加賞 <small>（順不同）</small></h3>
+
+
+                    <div class="row" id="works">
+
+
+
+                    </div>
+
+                    <h3 class="">賞品</h3>
+
+                    <ul class="black">
+                        <li>CrystalDiskInfo Kurei Kei Edition 特設ページで紹介</li>
+                        <li>CrystalDiskInfo Kurei Kei Edition カレンダーに採用</li>
+                        <li>副賞： プロ生ちゃんグッズ、カレンダー</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="pad-lg" id="blue-section">
+
+        <div class="container" style="padding-bottom:40px;">
+            <div class="row margin-40" id="works">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h2 class="white">テーマのインストール</h2>
+
+                    <h3 class="white">Ultimate のインストール</h3>
+                    <br />
+                    <p class="white margin-30">
+                        受賞作品のテーマ画像は CrystalDiskInfo Kurei Kei Edition <strong>Ultimate</strong> に含まれています。<br />
+                    </p>
+
+                    <div class="text-center wow fadeInUp margin-60">
+                        <a href="https://crystalmark.info/" target="_blank" class="btn btn-secondary btn-lg">Ultimate ダウンロード（準備中）</a>
+                    </div>
+
+                    <h3 class="white">個別テーマ画像の手動インストール</h3>
+                    <br />
+                    <div class="col-sm-10 col-sm-offset-1 margin-30 margin-30" data-wow-delay="1s">
+                        <p class="white">
+                            Google Drive からテーマをダウンロードしてください。
+                        </p>
+
+                        <div class="panel panel-default margin-30">
+                            <div class="panel-body">
+                                <a href="img/download.png" class="zoom" data-type="image" data-toggle="lightbox">
+                                    <img src="img/download.png"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                </a>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>テーマ画像のダウンロード</h4>
+                            </div>
+                        </div>
+
+                        <p class="white margin-30">
+                            ダウンロードしたテーマ画像を、CrystalDiskInfo Kurei Kei Edition のインストールフォルダーに直接コピーしてください。
+                        </p>
+
+
+                        <div class="panel panel-default margin-30">
+                            <div class="panel-body">
+                                <a href="img/install.png" class="zoom" data-type="image" data-toggle="lightbox">
+                                    <img src="img/install.png"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>
+                                </a>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>テーマ画像の配置</h4>
+                            </div>
+                        </div>
+
+                        <p class="white">
+                            インストールフォルダーにある「CdiResource\themes」フォルダー以下に、「KureiKei」から始まる名前のフォルダーごとテーマ画像をコピーします。
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <div class="ninja_onebutton">
+        <script type="text/javascript">
+            //<![CDATA[
+            (function (d) {
+                if (typeof (window.NINJA_CO_JP_ONETAG_BUTTON_931bb49f947e5b718527e58785b8ce9e) == 'undefined') {
+                    document.write("<sc" + "ript type='text\/javascript' src='\/\/omt.shinobi.jp\/b\/931bb49f947e5b718527e58785b8ce9e'><\/sc" + "ript>");
+                } else {
+                    window.NINJA_CO_JP_ONETAG_BUTTON_931bb49f947e5b718527e58785b8ce9e.ONETAGButton_Load();
+                }
+            })(document);
+//]]>
+        </script><span class="ninja_onebutton_hidden" style="display:none;"></span><span style="display:none;" class="ninja_onebutton_hidden"></span>
+    </div>
+
+
+
+
+    <footer>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-6 margin-20">
+                    <ul class="list-inline social">
+                        <li>Contact:&ensp;<a target="_blank" href="https://twitter.com/pronama"><i class="fa fa-twitter"></i></a>&ensp;<a href="mailto:info@pronama.jp"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" href="http://pronama.azurewebsites.net/privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 text-right">
+                    <p class="copyright">
+                        Copyright &copy; 2017 <a target="_blank" href="http://pronama.co.jp">Pronama LLC</a><br>
+                        Theme design: Created by <a target="_blank" href="http://visualsoldiers.com">Visual Soldiers</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script>
+        var works = [
+            {
+                "id": "tasteless0wash",
+                "img": "01.jpg",
+                "imglink": "https://www.pixiv.net/member_illust.php?mode=medium&illust_id=64257857",
+                "user": "水っぽいスープ",
+                "userlink": "https://twitter.com/tasteless0wash",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYNjU5ZGZWNFQ2RUk?usp=sharing",
+                "comment": "優雅なフィギュアスケート衣装！　きらびやか✨",
+            },
+            //{
+            //    "id": "mugya",
+            //    "img": "02.jpg",
+            //    "imglink": "",
+            //    "user": "むぎゃ",
+            //    "userlink": "",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYejRGNXA4Wm1iRmc?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "WabisabiApp",
+                "img": "03.jpg",
+                "imglink": "https://www.pixiv.net/member_illust.php?mode=medium&illust_id=64349123",
+                "user": "わびさび",
+                "userlink": "https://twitter.com/WabisabiApp",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYbENGeDJEUUhndGc?usp=sharing",
+                "comment": "ゆる～くてかわいい？　壁紙としてもグッド👍",
+            },
+            {
+                "id": "wasserglas",
+                "img": "04.jpg",
+                "imglink": "",
+                "user": "コップ一杯の水",
+                "userlink": "https://twitter.com/wasser_glas",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYY0JKQzhLSzVfcWM?usp=sharing",
+                "comment": "元気いっぱいチア姿！　はりきってゴー!✊",
+            },
+            //{
+            //    "id": "",
+            //    "img": "05.jpg",
+            //    "imglink": "",
+            //    "user": "水っぽいスープ",
+            //    "userlink": "https://twitter.com/tasteless0wash",
+            //},
+            //{
+            //    "id": "yoite",
+            //    "img": "06.jpg",
+            //    "imglink": "",
+            //    "user": "yoite",
+            //    "userlink": "https://pixiv.me/4696556",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYSGNWRTdNcFB1bVE?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            //{
+            //    "id": "kunimi",
+            //    "img": "07.jpg",
+            //    "imglink": "",
+            //    "user": "国見",
+            //    "userlink": "",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYRzJPY1pXN1V5a3M?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "usamaru",
+                "img": "08.jpg",
+                "imglink": "",
+                "user": "うさまる",
+                "userlink": "http://freegamaeusamaru.web.fc2.com/",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYZDBiNHNwVm1LaGM?usp=sharing",
+                "comment": "お菓子くれなきゃいたずらしちゃうぞ！　猫耳がポイント！",
+            },
+            {
+                "id": "MikoHiiragi",
+                "img": "09.jpg",
+                "imglink": "",
+                "user": "柊 みこ",
+                "userlink": "https://twitter.com/0721Miko",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYRkdtMVhqRTk3ZG8?usp=sharing",
+                "comment": "ふんわりやさしい雰囲気だね。3人一緒で嬉しい！",
+            },
+            {
+                "id": "ONI",
+                "img": "10.jpg",
+                "imglink": "",
+                "user": "ONI",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYMU5TeUZGSXRYM0k?usp=sharing",
+                "comment": "きれいな紅葉。デニムスカートがいいね！",
+            },
+            {
+                "id": "tontonokura",
+                "img": "11.jpg",
+                "imglink": "",
+                "user": "御酢御クラット",
+                "userlink": "https://twitter.com/Osuokuratto",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYT2p3OEJCX2NJTk0?usp=sharing",
+                "comment": "夜の港かな？　夜景をバックに一枚！　グッドスマイル☺",
+            },
+            {
+                "id": "tutumu",
+                "img": "12.jpg",
+                "imglink": "",
+                "user": "温(つつむ)",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYV1daYWhIRWNEM0E?usp=sharing",
+                "comment": "サイバーでカラフルな衣装がかっこいい！　ディスプレイも未来的！",
+            },
+            {
+                "id": "haratarou",
+                "img": "13.jpg",
+                "imglink": "",
+                "user": "原太郎",
+                "userlink": "https://kohara-notebook.tumblr.com/",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYbU1EakRubmZWQ0U?usp=sharing",
+                "comment": "草原が気持ちい～！　そよ風を感じるね👍",
+            },
+            //{
+            //    "id": "TakiOuno",
+            //    "img": "14.jpg",
+            //    "imglink": "",
+            //    "user": "櫻野田規",
+            //    "userlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYUGlhZ04yVG1PY0U?usp=sharing",
+            //    "downloadlink": "",
+            //    "comment": "コメント",
+            //},
+            //{
+            //    "id": "kosake",
+            //    "img": "15.jpg",
+            //    "imglink": "",
+            //    "user": "小酒（こさけ）",
+            //    "userlink": "https://twitter.com/norisugoshi",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYN2lrQ0VKVUQ3RnM?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "misaki",
+                "img": "16.jpg",
+                "imglink": "",
+                "user": "岬",
+                "userlink": "http://ichigomilklovess.wixsite.com/misaki86",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYaEloZ1V0Wnd2djQ?usp=sharing",
+                "comment": "いい天気だね。街に出かけよう！",
+            },
+            {
+                "id": "uuumin",
+                "img": "17.jpg",
+                "imglink": "",
+                "user": "悠々遊民",
+                "userlink": "https://twitter.com/uu_umin",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYZVZNR1lYdWRkLTA?usp=sharing",
+                "comment": "どやぁ！　自信満々な感じだね！",
+            },
+            {
+                "id": "Suzuharada",
+                "img": "19.jpg",
+                "imglink": "",
+                "user": "すずはらだ",
+                "userlink": "https://twitter.com/suzuharada3",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYbGwtNUhmZzVzMGs?usp=sharing",
+                "comment": "ビシッと決めポーズ！　ヘッドセットがポイント👍",
+            },
+            {
+                "id": "kirinashi",
+                "img": "20.jpg",
+                "imglink": "",
+                "user": "霧奈詩",
+                "userlink": "https://twitter.com/kirinashi",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYdHZTb05aZ1gzRGM?usp=sharing",
+                "comment": "あっ、あの人影は…！？　何が始まるのかな？",
+            },
+            //{
+            //    "id": "",
+            //    "img": "21.jpg",
+            //    "imglink": "",
+            //    "user": "蓮水薫",
+            //    "userlink": "http://hasumikaoru.net/",
+            //},
+            {
+                "id": "Bukichi",
+                "img": "22.jpg",
+                "imglink": "",
+                "user": "ぶきち",
+                "userlink": "https://twitter.com/bu_ky7",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYQUd6bGJyWDI3c28?usp=sharing",
+                "comment": "真っ赤なドレスは文化祭の舞台衣装？　青空とマッチしてるね",
+            },
+            //{
+            //    "id": "ShitimiNanami",
+            //    "img": "23.jpg",
+            //    "imglink": "",
+            //    "user": "七味七海",
+            //    "userlink": "https://twitter.com/shitimi_73",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYUG5tR3VaR05ldm8?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "Banana",
+                "img": "24.jpg",
+                "imglink": "",
+                "user": "花奈",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYTXNxclEtdmUycU0?usp=sharing",
+                "comment": "落ち着いた色のドレスにピンクのリボンがかわいい！",
+            },
+            {
+                "id": "Hoshino",
+                "img": "25.jpg",
+                "imglink": "",
+                "user": "星埜",
+                "userlink": "https://twitter.com/hsh_106",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYZXUwZEFtLWNiZm8?usp=sharing",
+                "comment": "チア衣装もいいね！　紅組ファイト！",
+            },
+            //{
+            //    "id": "tori",
+            //    "img": "26.jpg",
+            //    "imglink": "",
+            //    "user": "とり",
+            //    "userlink": "",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYV1g4ZElVN3pvT3c?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "hubrael",
+                "img": "27.jpg",
+                "imglink": "",
+                "user": "はぶらえる",
+                "userlink": "https://twitter.com/hubrael",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYQWRVNlhXU3QtZEk?usp=sharing",
+                "comment": "基板がどーん！　SSDの健康状態をチェックするよー！",
+            },
+            {
+                "id": "UmishimaRinta",
+                "img": "28.jpg",
+                "imglink": "",
+                "user": "海嶋りんた",
+                "userlink": "https://twitter.com/rrr_ttm",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYcjMxNnZTSW5ENWc?usp=sharing",
+                "comment": "ドーナツで腹ごしらえ！　ポップなカラーでいいね！",
+            },
+            {
+                "id": "yukinosakana",
+                "img": "29.jpg",
+                "imglink": "https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65196974",
+                "user": "ユキノサカナ",
+                "userlink": "https://twitter.com/yukinosakana",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYWVZJelh0X0d5Zms?usp=sharing",
+                "comment": "屋上で待ってるよ？　さわやかな風を感じるね",
+            },
+            //{
+            //    "id": "AsYuihira",
+            //    "img": "30.jpg",
+            //    "imglink": "",
+            //    "user": "結平明日",
+            //    "userlink": "http://ciel.ciao.jp/",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYRFJRQ04yZUpwU3c?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "GuChi",
+                "img": "31.jpg",
+                "imglink": "",
+                "user": "Gu-Chi",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYWHRnWEU0cWRFNjA?usp=sharing",
+                "comment": "一緒にプログラミングしよ！　みたいな？　ポップな市松模様もグッド👍",
+            },
+            {
+                "id": "NIPPONPON",
+                "img": "32.jpg",
+                "imglink": "",
+                "user": "ヽ(°▽、°)",
+                "userlink": "https://twitter.com/NIPPONPON",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYQ29MRWNic2JyM1E?usp=sharing",
+                "comment": "ビシッ！　スタイリッシュなデザイン！✨",
+            },
+            {
+                "id": "Koh830",
+                "img": "33.jpg",
+                "imglink": "",
+                "user": "Koh830",
+                "userlink": "https://pixiv.me/koh830",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYOXhJYXQtNEhTREU?usp=sharing",
+                "comment": "おもしろい世界観だね。ふぃーちゃんたちの🎈はどこに行くのかな",
+            },
+            //{
+            //    "id": "",
+            //    "img": "34.jpg",
+            //    "imglink": "",
+            //    "user": "琥珀むろ",
+            //    "userlink": "https://twitter.com/muromeron0429",
+            //},
+            //{
+            //    "id": "nyamco",
+            //    "img": "35.jpg",
+            //    "imglink": "",
+            //    "user": "にゃーむこ",
+            //    "userlink": "https://twitter.com/nya_mco",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYMHhwMktGNjRLdTQ?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "nekomina",
+                "img": "36.jpg",
+                "imglink": "",
+                "user": "猫見倣",
+                "userlink": "https://twitter.com/nekominarai_es",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYLXYwMXJMVnVIWHc?usp=sharing",
+                "comment": "雲海に見えるイルカのむれが神秘的だね～🎶",
+            },
+            {
+                "id": "yanagiaoi",
+                "img": "37.jpg",
+                "imglink": "",
+                "user": "柳葵",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYYkI5NW5BdWdvMlU?usp=sharing",
+                "comment": "青色でさわやかにまとまってるね！　いえい！",
+            },
+            {
+                "id": "simoogawa",
+                "img": "38.jpg",
+                "imglink": "https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65210698",
+                "user": "下小川",
+                "userlink": "https://twitter.com/cvbhyuga",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYR2hZY0l4ZVFhb2c?usp=sharing",
+                "comment": "チェックできるデバイス一覧かな？　ドライブわしづかみ！",
+            },
+            {
+                "id": "hashinoyutaka",
+                "img": "39.jpg",
+                "imglink": "",
+                "user": "杷篠豊",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYejY1d3JYQXZqMjQ?usp=sharing",
+                "comment": "寒い日は暖かい飲み物で！　シックなファッションもいいね",
+            },
+            //{
+            //    "id": "",
+            //    "img": "40.jpg",
+            //    "imglink": "",
+            //    "user": "ねこ☆ぱん",
+            //    "userlink": "https://twitter.com/nekopan00",
+            //},
+            {
+                "id": "Hamaru",
+                "img": "41.jpg",
+                "imglink": "http://hamarulog.wixsite.com/portfolio/single-post/2017/10/01/%E3%83%97%E3%83%AD%E7%94%9F%E3%81%A1%E3%82%83%E3%82%93%E3%83%86%E3%83%BC%E3%83%9E%E7%94%BB",
+                "user": "葉丸/Hamaru",
+                "userlink": "http://hamarulog.wix.com/portfolio",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYeUI3aFl4d0QwMUE?usp=sharing",
+                "comment": "ふー勉強おわり！　いまから何しようかな？　まだまだ元気！",
+            },
+            {
+                "id": "AidaSanaki",
+                "img": "42.jpg",
+                "imglink": "",
+                "user": "間　早菜木",
+                "userlink": "https://sanakichi.jimdo.com/",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYRThTMjBpLTNjZkE",
+                "comment": "メガネ姿も良い感じだね！　仕事できそうに見える？",
+            },
+            {
+                "id": "toco",
+                "img": "43.jpg",
+                "imglink": "https://www.pixiv.net/member_illust.php?mode=medium&illust_id=65225966",
+                "user": "床",
+                "userlink": "https://pixiv.me/toco-yy",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYYk1NdndJTlA4VEE?usp=sharing",
+                "comment": "動きも表情も元気いっぱいでいいね！　はりきってこー！",
+            },
+            {
+                "id": "DvorakHashimoto",
+                "img": "44.jpg",
+                "imglink": "",
+                "user": "Dvorakはしもと",
+                "userlink": "https://twitter.com/dvorak__",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYMWxraUx2b2hST1k?usp=sharing",
+                "comment": "電子の海？　見つめて何を思うのかな",
+            },
+            //{
+            //    "id": "",
+            //    "img": "45.jpg",
+            //    "imglink": "",
+            //    "user": "ぽよよんチヒロ",
+            //    "userlink": "https://twitter.com/poyoyon_chihiro",
+            //},
+            //{
+            //    "id": "maru",
+            //    "img": "46.jpg",
+            //    "imglink": "",
+            //    "user": "maru",
+            //    "userlink": "",
+            //    "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYMloxcTZ2Zll6bjg?usp=sharing",
+            //    "comment": "コメント",
+            //},
+            {
+                "id": "meri",
+                "img": "47.jpg",
+                "imglink": "",
+                "user": "meri",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYcjdXVmNRQ1o0Z0U?usp=sharing",
+                "comment": "メイド衣装も悪くないね！　メイド喫茶がんばるぞ～",
+            },
+            {
+                "id": "sigma",
+                "img": "48.jpg",
+                "imglink": "",
+                "user": "sigma",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYTm9nRHJCbk9LWlk?usp=sharing",
+                "comment": "夕暮れどきの一枚。今日もお疲れ様！",
+            },
+            {
+                "id": "opta",
+                "img": "49.jpg",
+                "imglink": "",
+                "user": "opta",
+                "userlink": "",
+                "downloadlink": "https://drive.google.com/drive/folders/0B_aSQbStz8wYYVl2MklxRG1BUm8?usp=sharing",
+                "comment": "かわいいサンタ服だね！　ハッピークリスマス🎄",
+            },
+            //{
+            //    "id": "",
+            //    "img": "50.jpg",
+            //    "imglink": "",
+            //    "user": "ななつなつ",
+            //    "userlink": "https://twitter.com/7nanatunatu",
+            //},
+        ];
+        $(function () {
+            var html = "";
+            $.each(works, function (i, v) {
+
+                var userlink = "";
+                if (v.userlink) {
+                    if (v.userlink.indexOf("https://twitter.com") >= 0)
+                        userlink = '<a class="exlink" href="' + v.userlink + '" target="_blank"><i class="fa fa-twitter"></i></a>';
+                    else
+                        userlink = '<a class="exlink" href="' + v.userlink + '" target="_blank"><i class="fa fa-globe"></i></a>';
+                }
+
+                html += '<div class="col-md-6 col-sm-6 work-div" id="KureiKei~' + v.id + '">' +
+                    '    <div class="panel panel-default">' +
+                    '        <div class="panel-body">' +
+                    '            <a href="img/' + v.img + '" class="zoom" data-type="image" data-toggle="lightbox">' +
+                    '                <img src="img/' + v.img + '"><span class="overlay"><i class="fa fa-arrows-alt"></i></span>' +
+                    '            </a>' +
+                    '        </div><div class="panel-footer">' +
+                    '            <h4>' + (v.userlink ? '<a href="' + v.userlink + '" target="_blank">' + v.user + 'さん</a>' : v.user + 'さん') + '・' + userlink +
+                    '            &nbsp;<a class="exlink" href="' + v.downloadlink + '" target="_blank"><i class="fa fa-download" title="テーマ個別ダウンロード"></i></a>' +
+                    '            </h4>' +
+                    '        </div>' +
+                    '    </div>' +
+                    '    <div class="media margin-40 comment">' +
+                    '        <div class="media-left">' +
+                    '            <img class="media-object img-circle icon3" src="img/icon3.png" />' +
+                    '        </div>' +
+                    '        <div class="media-body">' +
+                    '            <div class="popover right show" style="position:relative; max-width:100%;">' +
+                    '                <div class="arrow"></div>' +
+                    '                <div class="popover-content">' + v.comment + '</div>' +
+                    '            </div>' +
+                    '        </div>' +
+                    '    </div>' +
+                    '</div>';
+
+
+                ;
+            });
+            $("#works").append(html);
+        });
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mikan.js"></script>
+    <script src="Scripts/ekko-lightbox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ultimate").show();
+
+            $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function () {
+                var $this = $(this),
+                    c = $this.data('count');
+                if (!c) c = 0;
+                c++;
+                $this.data('count', c);
+                $('#' + this.id + '-bs3').html(c);
+            });
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox({
+                    alwaysShowClose: false,
+                });
+            });
+        });
+
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-39768353-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
